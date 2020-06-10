@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <title>To do List</title>
     <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
   </head>
+
   <body>
     <div class="title">
       <h2>My To Do List</h2>
@@ -16,20 +19,6 @@
       <ul id="list">
       </ul>
     </div>
-
-    <script type="text/javascript">
-
-      submitClicked = function(){
-        var li_count = document.getElementById("list").getElementsByTagName("li").length;
-        document.getElementById("list").innerHTML+="<li>"+document.getElementById("textbox").value+"<input type=\"button\" id=\""+li_count+"\" value=\"x\" onclick=\"deleteClicked(this.id)\"> </li>"
-      }
-
-      deleteClicked = function(index){
-        var listtodo = document.getElementsByTagName("li");
-        console.log(index, listtodo[index]);
-        listtodo[index].style.textDecoration = "line-through";
-      }
-    </script>
-
   </body>
+
 </html>
